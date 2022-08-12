@@ -1,0 +1,42 @@
+trainer:
+  seed: 1
+  learning_rate: 1e-3
+  final_learning_rate: ${trainer.learning_rate}
+  outdir: ${oc.env:OUTDIR}
+  pretrained_model: ${oc.env:DATASET_DIR}/best_model.pt
+  expert_batch_size: 128
+  snap_freq: 1024
+  resume: ${oc.env:OUTDIR}/last_snap.pt
+  vocab: ${oc.env:DATASET_DIR}/vocab.csv
+  init_smiles: CC
+
+  history:
+    class: SimpleHistory
+    backup_freq: 100
+    history_dir: ${oc.env:OUTDIR}/history
+
+  dataset:
+    class: ExpertDataset2
+    input_pkl: ${oc.env:DATASET_DIR}/work
+
+  agent:
+    epochs: 2
+    batch_size: 128
+    update_interval: 2048
+    expert_coef: 0.001
+    value_func_coef: 1.0
+    entropy_coef: 0.5
+    entropy_clip: 0.5
+
+  model:
+    hidden_size: 128
+
+  reward:
+    class: SimilarityReward
+    target: "Cc1ccc(-c2cc(C(F)(F)F)nn2-c2ccc(S(N)(=O)=O)cc2)cc1"
+    valid_step_reward: 0.0
+    invalid_step_reward: -0.1
+    reuse_step_score: false
+
+logger:
+  level: info

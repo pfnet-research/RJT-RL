@@ -1,0 +1,11 @@
+pytest>=5.4.2
+pytest-cov>=2.9.0
+pytest-xdist>=2.3.0
+pysen==0.10.2
+invoke==1.4.1
+black==22.3.0
+isort==5.1.4
+flake8==4.0.1
+flake8-bugbear==22.7.1
+mypy==0.971
+types-toml

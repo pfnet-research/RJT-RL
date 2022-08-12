@@ -1,0 +1,12 @@
+gym<=0.18.3
+pytorch_pfn_extras==0.5.5
+toml
+torch
+tqdm>=4.60.0
+pandas>=1.2.4
+numpy>=1.10
+omegaconf>=2.1.0
+pfrl==0.3.0
+networkx~=2.5.0
+packaging
+joblib~=1.1.0
