@@ -17,9 +17,14 @@ pip install .
 ```
 
 ## Usage
+### Download dataset and model weights
+If you want to use the pretrained policy using Zinc250k dataset,
+please download the dataset and model weights files from zenodo [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6984632.svg)](https://doi.org/10.5281/zenodo.6984632)
+and save to the [data](/data) directory.
+
 ### Pretraining the policy network
-**Caution:** This repository already contains the pretrained policy's weight file ([file](/results/best_model.pt)) using Zinc250k dataset,
-so you can skip this section if you are not trying to use other molecule libraries for the expert dataset.
+**Caution:** If you are not trying to use other dataset and have downloaded the dataset and pretrained model files,
+you can skip this section.
 
 To pretrain the policy network using [Zinc250k dataset](/data/zinc250k.csv):
 1. Download the dataset (into the data directory)
