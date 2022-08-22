@@ -7,7 +7,7 @@ Implementation of "Molecular design method using a reversible tree representatio
 ## Environment
 This package run under the environment:
 * Python: 3.8
-* RDKit: 2020.09.3
+* RDKit: [2020_09_3](https://github.com/rdkit/rdkit/tree/Release_2020_09_3)
 
 The other package dependencies are described in [requirements.txt](/requirements.txt).
 
